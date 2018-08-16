@@ -1,5 +1,5 @@
 # Announcements
-**No Class:** August 28th
+**No Class:** August 21th
 
 **Dates (tentative):**
 - Quiz 1: 9/6

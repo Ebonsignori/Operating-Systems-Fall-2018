@@ -10,3 +10,4 @@ This repo contains all of the content from Dr. Hashemi's lectures. Each subdirec
 
 # Lectures
 - [Lecture 1 (8-14)](./lecture_1%20(8-14))
+- [Lecture 2 (8-16)](./lecture_2%20(8-16))
