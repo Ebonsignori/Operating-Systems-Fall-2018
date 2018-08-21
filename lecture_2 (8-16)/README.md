@@ -1,4 +1,5 @@
-# Announcements
+# Lecture 2
+### Announcements
 Still no class on August 21st
 
 # Lecture Notes
@@ -95,7 +96,7 @@ After the kernel is loaded, we delete it from memory and keep the original copy 
         - Every interrupt and trap has a solution (think error handling) that comes with the operating system. 
         - Each interrupt is part of an array in memory. For example, if interrupt signal 1 is sent, then the pointer to the solution 1 corresponding to interrupt 1 is immediately loaded into memory and given CPU cycles. 
 
-** Interrupt:** An interrupt is a signal issued by a computer resource to get the attention of the operating system. 
+**Interrupt:** An interrupt is a signal issued by a computer resource to get the attention of the operating system. 
 It is always sent at the completion of a process.
 
 **Trap:** Traps are interrupts issued by a computer process. Traps check for solutions and are handled within the running process from which they are fired before they check the trap vector. (ideally, the user has error handling that catches the trap before it has to be checked against the trap array).

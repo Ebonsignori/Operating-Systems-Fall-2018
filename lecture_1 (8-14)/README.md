@@ -1,4 +1,5 @@
-# Announcements
+# Lecture 1
+### Announcements
 **No Class:** August 21th
 
 **Dates (tentative):**
