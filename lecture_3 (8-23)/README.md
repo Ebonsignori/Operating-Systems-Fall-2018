@@ -75,8 +75,8 @@ while () {
 ### Resident Monitor of Linux (kernel)
 1. Process, Resource, File Management (Persists in RAM)
 2. Device Driver, Interrupt Handler (Persists in RAM)
-3. Modules (In RAM at startup, then on hard drive)
-- Temporarily loaded 
+3. Modules (In RAM at startup, then on the hard drive)
+    - Temporarily loaded 
 
 ### Linux Shell
 User -> Shell -> Kernel
@@ -95,24 +95,24 @@ Where each quantum is P1, P2, ... P8
 
 If quantum P1 finishes (program completes and doesn't need CPU power) before its allotted time, then the next quantum, P2 will immediately take over and the slices will be readjusted so that the P2 doesn't get extra time
 
-7. **Multi User System**:
+7. **Multi-User System**:
 Several users are using the CPU at the same time. 
 
-8. **Multi Program System**:
+8. **Multi-Program System**:
 Several Programs / Several Jobs are using the CPU
 
 **Spooler**
 
-**Spool**: (Symultanious Peripheral Operations Online)
-It accomodates or manages the input jobs (new programs that are arriving) and the output jobs (jobs that have executed / finished and are waiting to use an ouput device) 
+**Spool**: (Simultaneous Peripheral Operations Online)
+It accommodates or manages the input jobs (new programs that are arriving) and the output jobs (jobs that have executed / finished and are waiting to use an output device) 
 
-Several programs are finished and waiting to use an I/O device, and a spooler is in charge. 
+In a multi-program system, several programs are finished and waiting to use an I/O device, and a spooler is in charge of directing them.
 
 9. **Real Time**:
     - Hard
-        - Computer guarentees that it will give you the result within the restricted time.
+        - Computer guarantees that it will give you the result within the restricted time.
     - Soft
-        - No guarentee, but it will give priority to program and try its best to process it in real time. 
+        - No guarantee, but it will give priority to program and try its best to process it in real time. 
         
         
 10. **PC Systems**:
@@ -129,23 +129,26 @@ Personal Computer. First was MS-DOS
         - Ex. Clustered Systems: Several Distributed Systems put together. (It can cover a bigger area of connectivity)
         - Ex. Distributed Systems: Physically away from each other, but can communicated with each other.
         
-We are interested in tightly coupled systems because they are cheaper, because they can share:
+We are interested in tightly coupled systems because they have a higher throughput (more CPUs), are cheaper, and more fault tolerant. 
+
+They are cheaper because they can share:
 - Peripherals
 - Mass Storage,
 - Power Supplies
-Also more fault tolerant / reliable (If one parts fails, uses another part)
-Higher throughput (more CPUs)
+
+They are more fault tolerant / reliable because if one parts fails, the system can borrow another part.
+
 
 ### Parallel Systems
 Mode of Operation
 - Symmetric
-Works independently, but shares the same RAM (?)
+    - Works independently, but shares the same RAM (?)
 - Asymmetric (Employer-Employee Technique)
-Master CPU and a bunch of slaves. Breaks down huge task to different slaves or (?)
+    - Master CPU and a bunch of slaves. Breaks down huge task to different slaves or (?)
 
 #### New Trends of Parallel System
 - Classic Parallel System:
-Multiple chips, each chip has it's own CPU
+Multiple chips, each chip has its own CPU
 - New Trend
 Single Chip, multiple CPU 
 
@@ -154,9 +157,9 @@ Single Chip, multiple CPU
 
 ### Clustered Systems
 Symmetric Clustering
-a. Each node workds on its own task
+a. Each node works on its own task
 b. Nodes monitor each other
-(can help eacho ther, borrow files, etc.)
+(can help each other, borrow files, etc.)
 
 Asymmetric
 a. One node is in "Hot-Standby Mode" and its function is to monitor other nodes
@@ -183,7 +186,7 @@ When client asks something of server
 2. Data Transfer takes place
 3. Bookkeeping (Bookkeeping Information: when the request was sent, length of request, etc.)
 
-12. **Handheld Systems**
+13. **Handheld Systems**
 Example: Smart Phone.
 
 Constraints that handheld systems must overcome

@@ -57,15 +57,13 @@ Computer characteristics that do not exist in reality, but that you think exist.
 8. Protection Management Routines
 
 **Kernel**: 
-```diff
-- Definition likely to be updated in future lectures
-```
+The kernel is the part of OS that *always* stays in RAM
 
 If you want to execute a program, then it must be brought into your ram, it cannot sit on the disk. 
 
 When starting an operating system, instead of loading the entire OS, we load the absolute minimum (the part that we need) of the OS onto the ram upon startup, and that absolute minimum is called the Kernel.
 
-After the kernel is loaded, we delete it from memory and keep the original copy on a slower harddrive. 
+After the kernel is loaded, the rest of the OS lives on the slower harddrive. 
 
 ## OS Evolution
 1. Sign-up Scheme
