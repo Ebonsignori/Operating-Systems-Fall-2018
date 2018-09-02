@@ -159,5 +159,3 @@ BIOS (Basic Input/Output System) [Name of bootstrap Program]
     - Can be changed/updated
 - PnP (Plug and Play)
     - If BIOS is able to initialize configuration and mount it for you
-    
-## Event Driven Behavior of the OS

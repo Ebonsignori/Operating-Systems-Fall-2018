@@ -26,3 +26,5 @@ Links to each lecture, and their corresponding [Quizlet Flashcards](https://quiz
     - [Quizlet Cards](https://quizlet.com/_547ixj)
 - [Lecture 4 (8-27)](./lecture_4%20(8-28))
     - [Quizlet Cards (WIP)](#)
+- [Lecture 5 (8-30)](./lecture_5%20(8-30))
+    - [Quizlet Cards (WIP)](#)

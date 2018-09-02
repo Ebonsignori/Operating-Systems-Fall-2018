@@ -2,8 +2,8 @@
 ### Announcements
 Quiz on Thursday (9/6)
 
-### Lecture 3 Questions
-
+### Lecture 4 Questions
+None
 # Lecture Notes
 
 ## OS Services
@@ -72,51 +72,53 @@ Takes a source program written in a high level language and converts it to machi
          B       5..        var
         ``` 
 2. Syntax and semantic analyzer
-    Syntax Analyzer:
-    - Makes sure that if you write a statement, the syntax is correct. 
-    - Uses an automata to verify syntax for every statement. 
-        - Example, automata for if statement, for for statement, etc.
-        - Start of syntax analyzer uses epsilon to move between each of these automata. 
-   Semantic Analyzer 
+
+**Syntax Analyzer**
+   - Makes sure that if you write a statement, the syntax is correct. 
+   - Uses an automata to verify syntax for every statement. 
+   - Example, automata for if statement, for for statement, etc.
+   - Start of syntax analyzer uses epsilon to move between each of these automata (see image).
+   ![Automata](./imgs/automata.JPG) 
+**Semantic Analyzer** 
    - Build an execution matrix to check for correctness of semantics. 
    - Example: 
-    ```
-    B = 1.0;
-    C = 2.0;
-    A = B + C;
-    ```   
+   ```
+   B = 1.0;
+   C = 2.0;
+   A = B + C;
+   ```   
     
-    **Symbol Table**
-    - Constants on bottom, variables on top
-    ```
-    Token | Location | Type
-    B       500        var
-    =       503        equal
-    C       ...        var
-    =       ...        equal
-    A       ...        var
-    .
-    .
-    .
-    
-    1.0     ...        constant
-    2.0     ...        constant
-    3.0     None       T1 (temp)
-    ``` 
+**Symbol Table**
+- Constants on bottom, variables on top
+```
+Token | Location | Type
+B       500        var
+=       503        equal
+C       ...        var
+=       ...        equal
+A       ...        var
+.
+.
+.
+
+1.0     ...        constant
+2.0     ...        constant
+3.0     None       T1 (temp)
+``` 
       
-    **Execution Matrix**
-      ```
-      Number | Opcode | Op1            | Op2            | Temp
-      1        =        (Pointer to B)  (Pointer to 1.0)
-      2        =        (Pointer to C)  (Pointer to 2.0) 
-      3        +        (Pointer to B)  (Pointer to C)    T1 (result)
-      4        =        A               (Pointer to T1)
-      ```
+**Execution Matrix**
+  ```
+  Number | Opcode | Op1            | Op2            | Temp
+  1        =        (Pointer to B)  (Pointer to 1.0)
+  2        =        (Pointer to C)  (Pointer to 2.0) 
+  3        +        (Pointer to B)  (Pointer to C)    T1 (result)
+  4        =        A               (Pointer to T1)
+  ```
+
+![Execution Matrix and Symbol Table](./imgs/table.JPG)
 
 ##### Synthesis Component (part 2)
 Translator converts all hundreds of languages to assembly language, then only one compiler to convert from assembly to machine language.
-
-```Hashemi Quote of the day: "All mathematicians are socially retarded."``` 
 
 1. Intermediate Code Generation
 2. Code Generation
