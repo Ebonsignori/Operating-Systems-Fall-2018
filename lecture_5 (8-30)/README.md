@@ -13,34 +13,35 @@ None
         - I/O Operation
         - File Manipulation
         - Communication
-        - (slides)
+        - TODO: (see slides)
     - Efficiency of computer system operation
  
 ### Program Execution
-- OS provides for loading, running, and ending programs
+- OS provides for the loading, running, and ending of programs
 
 Source Program -> Translator -> Linker -> Loader -> Computer -> Results
 
 #### Programs
 1. **Source Program**: Any program written in any language
-- Source program is not edible (understood) by computer and must be converted to machine language, so source program is fed to translator.
+- A Source program is not edible (understandable) by a computer and must be converted to machine language, so source program is fed to translator.
 
 2. **Translator**: Takes source program and converts it into an *object program/module*
     - **Assembler:** If source program is assembly language, then translator is called assembler. 
     - **Compiler**: When source program is high level, then translator is called compiler.
-        - **Compile Time**: Time taken to compile source program into machine code.
+        - **Compile Time**: Time taken to compile a source program into machine code.
 
 
-3. **Linker (linkage editor)**: Takes *object program*. There are symbols in object program that are unknown to machine. Linker takes copies of libraries executable and creates an *executable program/module*
+3. **Linker (linkage editor)**: Takes the *object program/module* as input and creates the *executable program/module* as output. 
+There are symbols in object program that are unknown to machine. The Linker takes machine code copies of all of the unresolved symbols (libraries, system codes, etc) and combines them to create an *executable program/module*
 
-4. **Loader**: Takes *executable program* and puts it into RAM. 
+4. **Loader**: Takes an *executable program/module* and puts it into RAM. 
 
 5. **Computer**: Computes executable program in RAM when it is its turn.
 
 #### Items
 **Source Program**
 
-**Object Module**: Translation of source program into machine language with some unresolved symbols. Some symbols have no been converted into machine language.
+**Object Module**: The translation of source program into machine language with some unresolved symbols. Some symbols have no been converted into machine language.
    - **Unresolved Symbols**:
         - Libraries
             - Example `Math.SQRT`
@@ -50,8 +51,12 @@ Source Program -> Translator -> Linker -> Loader -> Computer -> Results
 Unresolved symbols combine in linker where they are linked to machine code of the libraries to form the **load module**.
 
 **Load Module / Executable Module**
-    1. Program Fetch: Takes load module and puts it in RAM
-    2. Loader: Saved on disk permanently and can be run at any time. 
+```diff
+- This section needs improvement
+TODO
+``` 
+   1. Program Fetch: Takes load module and puts it in RAM
+   2. Loader: Saved on disk permanently and can be run at any time. 
         - Creates everything and loads into RAM, but doesn't save load module
 
 Two types of Object Modules
@@ -75,9 +80,9 @@ Takes a source program written in a high level language and converts it to machi
 
 **Syntax Analyzer**
    - Makes sure that if you write a statement, the syntax is correct. 
-   - Uses an automata to verify syntax for every statement. 
-   - Example, automata for if statement, for for statement, etc.
-   - Start of syntax analyzer uses epsilon to move between each of these automata (see image).
+   - Uses automata to verify syntax for every statement. 
+   - Example, individual automata for if statement, for statement, etc.
+   -  Start of syntax analyzer uses epsilon to move between each of these statements who have their own separate automata, joined by epsilon transitions from starting node. (see image).
    ![Automata](./imgs/automata.JPG) 
 **Semantic Analyzer** 
    - Build an execution matrix to check for correctness of semantics. 
@@ -125,10 +130,10 @@ Translator converts all hundreds of languages to assembly language, then only on
 
 
 ## Interpreter
-Creates object module for one statement rather than entire program, and repeat for each statement. I.e. One statement at a time rather than entire program.
+Creates object module for one statement rather than entire program, and repeats for each statement. I.e. Processes one statement at a time rather than the entire program as the compiler would.
 
 ## Java Compiler
-Can be interpreter or compiler. 
+Can be interpreter or compiled. 
 
 ### Compiler
-Creates a load module in bytecode rather than machine language. Then those bytes are converted to machine language of local machine using JVM, then executed. 
+Creates a load module in bytecode rather than machine language. Then those bytes are converted to machine language of local machine using the JVM, then executed. 

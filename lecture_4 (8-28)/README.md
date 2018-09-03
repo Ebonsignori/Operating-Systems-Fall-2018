@@ -148,9 +148,10 @@ Use a separate smaller CPU to move buffer memory to RAM and handle Device Contro
     - Magnetic Disks
     
 ### Cache Memory (CPU Cache Memory: L1, L2, L3, and L4)
-   ```diff
-    - This section needs improvement
-   ``` 
+```diff
+- This section needs improvement
+TODO
+``` 
    - Caching
         - ?
    - Hardware caching (pipelining)
