@@ -13,7 +13,7 @@ None
         - I/O Operation
         - File Manipulation
         - Communication
-        - TODO: (see slides)
+        - Error Detection
     - Efficiency of computer system operation
  
 ### Program Execution
