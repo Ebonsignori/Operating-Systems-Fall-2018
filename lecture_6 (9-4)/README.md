@@ -17,7 +17,7 @@ OS Services Continued
             - Within area of OS, space is set aside for specific messages. Whenever process A or B has a chance, they check the specific space for communications from other process
             
 - Error Detection
-    - (TODO: Slides)
+    - OS Provides for handling of both hardware and software errors. 
     
 ## Services for Efficiency 
 All resource allocation is handled by the OS 
@@ -31,12 +31,13 @@ All resource allocation is handled by the OS
 ### Accounting
 OS Provides for collecting information that are used for.  
 Two purposes
-    - Billing: (need to know how much time they used system)
+    - Billing:
+        - Need to know how much time user used system
     - Configuration of System:
-        - Use algorithm that is more appropriate for system, so that .
+        - Use information to determine algorithm that is more appropriate for system.
         
 ### Protection
-Processes from each other and external users (see slides)
+Protect processes from each other and the system from intruders.
 #### I/O Protection
 - We need to protect all of the reading/writing of files (any access to data) protected from misuse by user. 
 - We do this by supervising I/O from OS (program cannot I/O, but must ask OS services to finish I/O operations)
@@ -45,7 +46,7 @@ Processes from each other and external users (see slides)
     - Monitor Mode
         - When an trap I/O is happening, another trap/interrupt cannot happen. The system is now in *monitor mode*. Any further interrupts are added to a queue and resolved when the current interrupt is finished. 
     - User Mode
-        - **Mode bit:** Hardware bit. Set to 1, then in monitor mode. No processes can do anything. They are waiting. Set to 0, then in user mode. 
+        - Uses a hardware bit called a *mode bit*. Set to 1, then in monitor mode. No processes can do anything. They are waiting. Set to 0, then in user mode, and program execution can continue. 
 
 #### Memory Protection
 When you boot a system you get copy of kernel and put in RAM.
@@ -93,7 +94,7 @@ last byte
 - Two registers are set for beginning and end of RAM allowed for process. Address of first byte and last byte. 
    
 **Base and Limit Registers**
-- Base: address of first byte available to the process, from that point **Limit** contains how many bytes are available to that process. 
+- *Base*: address of first byte available to the process, from that point *Limit:* contains how many bytes are available to that process. 
 
 Changing the contents of any of the above registers is a privileged instruction.  
 
@@ -102,21 +103,21 @@ Means that a trap is fired when one needs to be changed, and handled by OS.
 
 #### CPU Protection 
 For everything going on in a CPU, there is a *timer*.
-**Timer**: Anything that a CPU is asked to do, a timer is set. If time is violated, then operation is out. 
+**Timer**: Anything that a CPU is asked to do, a timer is set. If time is violated, then the operation is out. 
 
 ```
-10 bits:
+10 bits (binary 2^10 - 1):
 1 1 1 1 1 1 1 1 1 1
 
-Each ticks decrements value to 0, gradually setting all 10 bits to 0:
+Each ticks decrements its value to 0, gradually setting all 10 bits to 0:
 0 0 0 0 0 0 0 0 0 0
 
-Once timer gets to negative (not all 0), then the time is up.
+Once the timer gets to negative (not all 0), then the time is up.
 Thus it takes 2^n bits.
 
-Exanmple 
+Example 
 111
-Would take 8 ticks to cancel 
+Would take 8 ticks to cancel (not 9)
 ```
 
 Timer
@@ -129,10 +130,14 @@ Timer
 Example: A process needs an OS Service.
 
 Can be invoked using:
-1. System Calls: Small program that is invoked by process. An interface between the process that needs help and the OS. Runtime processes because they are given to process at runtime and not compiled in the code. 
-    - Examples: (slides)
+1. System Calls: Small program that is invoked by a process. An interface between the process that needs help and the OS. Runtime processes because they are given to process at runtime and not compiled in the code. 
     - Different from one OS to the next. They are in 100s. 
 2. System Programs: Large program (i.e. word processor). May use many system calls within it. An interface between user and OS. 
+
+#### System Call vs System Program
+1. Small vs Large 
+2. Process and Operating System vs User and Operating System
+3. A System Program may use several System Calls
 
 #### System Call Categories
 Process Control (each one of these has a system call)
@@ -187,8 +192,8 @@ System Calls for Communication
 (see slides)
 
 ### A Reminder
-Suppose OS needs an OS service or system call. 
-Parameter sent to system call. Multiple solutions.
+Suppose something needs an OS service or system call. 
+Where do we store the parameter(s) sent with the system call?
 1. Use registers
 2. Use RAM block (preferred)
 3. Use stack where you can push parameters
@@ -196,8 +201,3 @@ Parameter sent to system call. Multiple solutions.
 ### Accessibility of System Calls
 - In UNIX are callable by C or C++ programs.
 - In Windows use Win32 API comes with any compiler written for windows
-
-## System Call vs System Program
-1. Small vs Large 
-2. Process and Operating System vs User and Operating System
-3. A System Program may use several System Calls
