@@ -1,5 +1,5 @@
 # Operating Systems
-**Dr. Hashemi, Fall 2018**
+### Dr. Hashemi, Fall 2018
 
 **Notice**: *If you unfamiliar with Github Markdown, navigate to a lecture's directory on [github.com](https://www.github.com) and it will render the notes in a user friendly format. Example: [lecture 1](https://github.com/Ebonsignori/Operating_Systems_Fall_2018/tree/master/lecture_1%20(8-14)).*
 
@@ -24,7 +24,6 @@ Additionally, the [tests](#tests) and [assignments](#assignments) directories co
 # Lectures
 Links to each lecture, and their corresponding [Quizlet Flashcards](https://quizlet.com/evan_a__bonsignori/folders/operating-systems) (if applicable).
 
-
 - [Lecture 1 (8-14)](./lecture_1%20(8-14))
 - [Lecture 2 (8-16)](./lecture_2%20(8-16))
     - [Quizlet Cards](https://quizlet.com/_53iowl)
@@ -37,7 +36,7 @@ Links to each lecture, and their corresponding [Quizlet Flashcards](https://quiz
 - [Lecture 6 (9-4)](./lecture_6%20(9-4))
     - [Quizlet Cards](https://quizlet.com/_55tigk)
 - [Lecture 7 (9-11)](./lecture_7%20(9-11))
-    - [Quizlet Cards (WIP)]()
+    - [Quizlet Cards](https://quizlet.com/_5aqlvn)
 - [Lecture 8 (9-13)](./lecture_8%20(9-13))
     - [Quizlet Cards (WIP)]()
 - [Lecture 9 (9-18)](./lecture_9%20(9-18))

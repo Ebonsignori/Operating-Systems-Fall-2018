@@ -23,18 +23,19 @@ You do not a have a structure or well defined model. The entire OS is one progra
 
 First MSDOS that came out had a simple structure. Example, program eats up command interpreter in memory. 
 
-### Original Unix Structure
+### Simple Structure: Original Unix Structure
 Kernel was one large program that included:
-    a. Interfaces: need two separate interfaces
-        1. Terminal controllers, device controllers, and memory controlleds
-        2. System Calls interface (see slides)
-    b. Device Drivers
+  1. Interfaces: We need two separate interfaces:
+     1. **Kernel Interface With The Kernel:** Terminal controllers, device controllers, and memory controllers, ...
+     2. **Device Drivers:** Signal handling, file system, CPU scheduling, page replacement, page demand, ... 
+  2. Device Drivers
 
 ## Layered Structure
-Assume the Operating System is made up of layers. Layer 0, ..., N layers.
-Two assumptions
-1. Layer N is based on layer N-1 to 0 (N - 1, ..., 0). Any function that the layer does not provide for itself and it needs can be found in a previous layer. 
-2. If working on layer M if something goes wrong, then the error that happens is only part of that layer, M. Therefor all layers below must be correct. This improves the speed of debugging and the ease of writing the program. 
+In this structure, the Operating System is made up of layers. i.e. Layer 0, 1, 2, ..., N layers.
+
+This structure has two assumptions:
+1. Layer N is based on layer N-1 down to 0 (all the previous layers). Any function that the layer does not provide for itself and its own needs can be found in a previous layer. 
+2. If working on layer M and something goes wrong, then the error that happens is only part of that layer, M. Therefore all layers below must be correct. This improves the speed of debugging and the ease of writing the program. 
 
 This advantage creates modularity that is easier to deal with than one program made up of N parts.
 
