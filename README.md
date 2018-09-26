@@ -1,7 +1,9 @@
 # Operating Systems
 **Dr. Hashemi, Fall 2018**
 
-This repo contains the content from Dr. Hashemi's lectures. 
+**Notice**: *If you unfamiliar with Github Markdown, navigate to a lecture's directory on [github.com](https://www.github.com) and it will render the notes in a user friendly format. Example: [lecture 1](https://github.com/Ebonsignori/Operating_Systems_Fall_2018/tree/master/lecture_1%20(8-14)).*
+
+This repo contains the content from Dr. Hashemi's [lectures](#lectures). 
 
 Each directory is in the format:
 
@@ -17,8 +19,12 @@ And contains:
 - **slides_<lecture#>.md**: Slides from lecture *(optional)*
 - **/imgs**: Pictures of white board demonstrations *(optional)*
 
+Additionally, the [tests](#tests) and [assignments](#assignments) directories contain previous tests, and assignment requirements respectively. 
+
 # Lectures
 Links to each lecture, and their corresponding [Quizlet Flashcards](https://quizlet.com/evan_a__bonsignori/folders/operating-systems) (if applicable).
+
+
 - [Lecture 1 (8-14)](./lecture_1%20(8-14))
 - [Lecture 2 (8-16)](./lecture_2%20(8-16))
     - [Quizlet Cards](https://quizlet.com/_53iowl)
@@ -40,3 +46,16 @@ Links to each lecture, and their corresponding [Quizlet Flashcards](https://quiz
     - [Quizlet Cards (WIP)]()
 - [Lecture 11 (9-25)](./lecture%2011%20(9-25))
     - [Quizlet Cards (WIP)]()
+
+# Assignments
+Assignments, their assignment sheets, and any additional information provided by Dr. Hashemi.
+- [Assignment 1](./assignments/assignment_1)
+   - Using p-threads to decrypt a 3-part message
+   
+# Tests
+Tests, the lectures that they cover, Dr. Hashemi's review sessions, and a pdf of the test (if test date has passed). 
+- [Test 1 Review](./tests/test_1)
+   - Lectures 1 - 6
+  
+- [Test 2 (Midterm) Review [Not yet taken]]()
+   - Lectures 7 - 12
