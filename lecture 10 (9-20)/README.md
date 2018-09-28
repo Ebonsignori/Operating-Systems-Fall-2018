@@ -1,6 +1,8 @@
 # Lecture 10
 ### Announcements
-Homework Assigned Next Class
+Midterm next Thursday
+
+Assignment 1 Will Be Handed Out Next Class
 # Lecture Notes
 
 ## CPU Management System

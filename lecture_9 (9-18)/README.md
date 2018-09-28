@@ -1,6 +1,6 @@
 # Lecture 9
 ### Announcements
-
+None
 # Lecture Notes
 ## Thread
 Suppose you have process, **P1**. This process shares resources with process, **P2**. 
@@ -9,73 +9,76 @@ Both of them are executing within the same address space.
 
 In other words, they are using the same memory space for execution. 
 
-Both P1 and P2 are part of a bigger entity called a proces, and the memory space belongs to this process.
+Both P1 and P2 are part of a bigger entity called a process, and this memory space belongs to this process.
 
 Then P1 is a thread. 
 
-Heavyweight vs lightweight processes. Heavyweight does not share memory, threads to (and are lightweight).
+(TODO: Get missed segment of recording here. I started recording the class at this point and missed the beginning. If anyone has a full recording, please share).
 
-(get missed segment of recording and listen to what).
+Threads are used when a process is performing a big task and carves out pieces of the task and gives the work to a thread to do.
 
-Carving part of a big task that a process must do and give that part of the task to a thread. 
+### Heavyweight vs Lightweight processes 
+Heavyweight processes do not share memory, but threads do and are therefore lightweight processes. 
+
+A heavyweight process is equivalent of one task with only one thread. 
+
+A thread is considered a lightweight process.
 
 ### Attractive Property of Threads
-Context switching from one thread to another is shorter than switching from one process to another. 
+**Peer Thread:** Threads that are part of the same bigger entity process. A group of peer threads handles one task. 
 
-Because:
-1. Because they are occupying the same memory space, you don't need to save the base and limit registers for threads. 
-2. All the resources are shared between the threads. I.e. If a file is open and being used by thread 1, you don't need to close and reopen it again in order for thread 2 to use.
-3. Support one thread is using global variables, those global variables must be shared from the other threads. We do not need to save and readmit variables when we switch between threads within the same process.
+Since a group of peer threads handles one task, context switching from one thread to another is shorter than switching from one process to another.
+
+This is because:
+1. Since they are occupying the same memory space, you don't need to save the base and limit registers for threads. 
+2. All the resources are shared between the threads. I.e. If a file is open and being used by thread 1, you don't need to close and reopen it again in order for thread 2 to use it.
+3. Suppose one thread is using global variables, those global variables must be shared from the other threads. We do not need to save and readmit variables when we switch between threads within the same process.
 
 ### Made up of
 1. PC
 2. Register Set
-3. Stack 
+3. Stack Space
 
 [Shared]
 4. Code Section
 5. Data Section
 6. Resource Section
 
-A group of peer threads handles one task. This is faster than context switching between processes. 
-
 ### Process vs Thread
-(TODO all: Slides)
-1. A thread shares code 
-2. A thread is much smaller than a process
-3. Context Switching is shorter for a thread
-4. Having one process 
+1. A thread shares code section, data section, and resource section with peer threads.
+2. A thread is much smaller than a process.
+3. Context Switching is shorter for a thread.
+4. Having one process with multiple-threads is more efficient than having multi-processes (assuming that the multi-processes share the same task).
 5. No protection is needed in a multi-threading environment because the peer threads are dedicated to one task. 
 6. Threads allow a sequential process to be executed in parallel. 
 
 ### Process and Thread Similarities
-(TODO all: Slides)
-1.
-2.
-3.
+1. Both have the same set of states.
+2. A thread may also create children. 
+3. A thread within a process executes sequentially. 
+4. Each thread has its own stack and program counter. 
 
 ## Thread Types
-Two types:
+There are two types of threads:
 1. User Thread
 2. System (Kernel) Thread
 
 ### User Thread
-Is created in user space. 
-Schedule in the user space.
-Managed by a user-thread-library (without kernel intervention).
+**User Space:** The size of RAM allotted to user is decided by system, and all of the memory that can be accessed by the user is the user space. 
 
-**User Space:** Size of ram allotted to user is decided by system, but all memory that can be accessed by the user (not being used by kernel).
+1. Is created in user space. 
+2. Schedule within the user space.
+3. Managed by a user-thread-library (without kernel intervention).
 
 **Kernel is not aware of user-level threads.**
 
-User thread library: Is a system program.
-A system program is above kernel. 
-Examples of UTLs: (see slides).
+**User thread library:** Is a system program, and a system program is above kernel. 
+(TODO: Improve this definition. What does it do exactly?)
 
 ### Kernel Thread
-Is created in kernel space. 
-Schedule in the kernel space.
-Managed by kernel
+1. Is created in kernel space. 
+2. Schedule within the kernel space.
+3. Managed by the kernel
 
 For any user thread to be executed, a kernel thread must be created to run that thread. 
 
@@ -83,61 +86,86 @@ For each user thread, a kernel thread must be assigned and executed.
 
 All user threads are mapped to kernel threads by a system process. 
 
-Kernel threads execute faster than user thread, but are created slower than user threads. (See recording). 
+Kernel threads execute faster than a user thread, but are created slower than user threads. (TODO: See recording to improve what else he says about this). 
 
 #### User vs Kernel Threads
-1. (see slides)
-2. In a single thread hardware (where only one thread can be processed at a time)
-    - (TODO: See slides)
+1. User threads are created faster and scheduled faster than kernel threads, but are slower in terms of execution. 
+2. In a single thread hardware (where only one thread can be processed at a time):
+    1. If a user thread goes to a "wait" state, so do all of its peers
+    2. If a kernel thread goes to a "wait" state, then the Kernel may execute another thread from its peers. 
     
-### Multi Threading
-User threads map 1-1 to kernel threads. 
-(See slides)
+## Multi Threading Models
+The following 3 models show the mappings of user threads onto kernel threads. 
 
-1-1
+*See the slides on page 3 of the [Lecture 9 Slides](./slides_9.pdf)*
 
-M-1
+**1-1 (one-to-one):**
+- Advantage: Great Parallelism
+- Disadvantage: High Overhead Cost
 
-N-M
-If you have M (bigger) user threads and N (smaller) kernel threads.
-Some will go in parallel, some will be seq. (TODO: slides)
+**M-1 (many-to-one):**
+- Advantage: Low Overhead Cost
+- Disadvantage: No Parallelism 
 
+**M-N (many-to-many):**
+
+*Where m <= n* Where M are user threads (more of) and N are kernel threads (less or equal to). When not equal, some threads will execute in parallel, and some will execute sequentially. 
+- Advantage: Some Overhead Cost, Some Parallelism 
+- Disadvantage: Only to a degree of the advantages provided by other two methods  
 
 ## Threading Issues
+There are three issues with threading
 1. Fork and Exec System Calls
-If a thread wants to create another thread it uses Fork. Give a name, X and create new thread, X. 
+2. Cancellation
+3. Signal Handling
 
-If you have a user thread t1. 
+### Fork and Exec System Calls
+If a thread wants to create another thread it uses Fork. When forking, the thread will create new thread, and name it, X. 
 
-You are using `Fork t2` inside of t1. 
+If you have a user thread **t1**, and you use `Fork t2` inside of **t1** to create the forked thread, t2. 
 
 Within the larger process memory space, t1 is copied into t2 exactly the way it is, but gives it its own name, t2. 
 
-You need a system call to go into t2 and Exec clears the contents of t2 and brings in the context of t2. Before calling `Frok` t2, t1 decides the contents of t2 and then calls Fork. Some systems automatically call Exec, but some systems require a manual `Exec` sys call.
+You need a system call to go into t2, and that call is `Exec`. Exec clears the contents of t2 and brings in the context of t2. Before calling `Fork t2`, t1 decides on the contents of t2. 
 
-This happens before the user thread is mapped to the kernel thread. 
+Some systems automatically call Exec, but some systems require a manual `Exec` system call after a Fork is made.
 
-2. Cancellation: Termination of a thread before it is completed. 
-In two ways:
-    1. Asynchronous: Immediately cancel the target thread. As soon as you say cancel, it cancels.
-        - Problems:
-            - Updating Data: Suppose you have a thread in the middle of updating a database and is not finished updating and you send an async cancel call. You now have inconsistency in your database.
-            - Reallocation of resources: Can not be 100% relieved and given to other resources. If thread is in middle of updating and something happens, **Rollback** database returns to status before the updating started. During rollback it needs some resources that the thread is using, but cannot get it. 
-    2. Deferred (periodic cancellation): Check in a loop if there is a cancellation. 
-        - Overhead cost: Loop that checks periodically, steals cpu cycles. 
+*This process happens before the user thread is mapped to the kernel thread.* 
 
-3. Signal Handling:
-**Signal** : Generally speaking, interrupts and traps are signals. 
+### Cancellation
+Cancellation is termination of a thread before it is completed. 
 
-A resource issues a signal. (TODO: See slides)
+**Example of when cancellation is needed:** A DBMS is retrieving data from a database using several threads. One thread returns the result and thus the other threads must be canceled.
 
-(TODO: Slides again)
+It happens in two ways:
+1. **Asynchronous:** Immediately cancel the target thread. As soon as you say cancel, it cancels.
+    - Problems:
+        - Updating Data: Suppose you have a thread in the middle of updating a database and it is not finished updating when you send an asynchronous cancel call. You now have **inconsistency** in your database.
+        - Reallocation of resources: Resources can not be 100% relieved and given to other resources. If the thread is in middle of updating and something happens, the **Rollback** database function returns to the state of the database before the updating started. During rollback, the database needs some resources that the thread is using, but cannot get them. 
+2. **Deferred (periodic cancellation):** Check in a loop if there is a cancellation. 
+    - Overhead cost: The loop that checks periodically for the cancellation signal, steals cpu cycles. 
 
-Signal Types:
-    1. Synchronous:  (TODO: slides)
-    2. Asynchronous:
-    
-The signal is delivered... (TODO: Slides)
+### Signal Handling
+ - *Signal Definition* : Generally speaking, interrupts and traps are signals. (TODO: Is there a better definition than this?)
+
+#### Steps of signal application
+1. A resource issues a signal.
+2. It is delivered to another resource.
+3. The receiving resource handles it using either:
+    1. A user defined signal handler
+    2. A system defined signal handler (default signal handler)
+    3. Some resources use both types of handles
+
+#### Signal Types
+1. Synchronous: Sender and receiver are the same
+2. Asynchronous: Sender and receiver are different 
+
+#### Signal Delivery
+The signal is delivered to a source by delivering it to:
+1. The thread the the signal applies
+2. Every thread within the process
+3. A group of threads within the process
+4. A predefined thread
 
 
 ## Thread Pool
@@ -146,7 +174,7 @@ Sooner or later the resources of computer are exhausted after tons of threads ar
 
 Thread pools limits the number of threads that the process can handle at any given time. 
 
-When a process is created a number of empty threads are assigned to that process. 
+When a process is created, a number of empty threads are assigned to that process. 
 Those threads are called a thread pool. Each process has a number of threads. 
 
 ## Thread Specific Data
