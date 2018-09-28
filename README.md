@@ -42,9 +42,9 @@ Links to each lecture, and their corresponding [Quizlet Flashcards](https://quiz
 - [Lecture 9 (9-18)](./lecture_9%20(9-18))
     - [Quizet Cards](https://quizlet.com/_5bantr)
 - [Lecture 10 (9-20)](./lecture%2010%20(9-20))
-    - [Quizlet Cards (WIP)]
+    - [Quizlet Cards](https://quizlet.com/_5bb17d)
 - [Lecture 11 (9-25)](./lecture%2011%20(9-25))
-    - [Quizlet Cards (WIP)]
+    - [Quizlet Cards (Not Started)]
 
 # Assignments
 Assignments, their assignment sheets, and any additional information provided by Dr. Hashemi.
