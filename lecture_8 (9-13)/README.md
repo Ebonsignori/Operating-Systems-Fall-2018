@@ -11,11 +11,11 @@ Program is a text.
 **Process:** Program in RAM. Active Entity because it has extra information:
 Where is process located, base and limit registers, account the process is running on, what are the contents of registers in CPU, what is the contents of PC for this process, etc. 
 
-Process is a text + (plus)
-- Content of PC register
-- Contents of other registers
-- Has it's own stack
-- Has it's own data section (including global variables)
+Process is a text plus:
+- The content of PC register
+- The contents of other registers
+- It has its own stack
+- It has its own data section (including global variables)
 
 Also called a **sequential process** (same meaning)
 
@@ -24,14 +24,13 @@ New State -> (admitted)
 1. **New** State: Time program moves from harddisk into RAM (admitted into RAM)
 2. **Ready** State: Process is ready to be executed/get attention by/of CPU. 
 3. **Running** State: When a process is running 3 cases happen
-    - During time slice the process is running it is finished. Then it goes to *terminated state*.
-    - If time slice is finished without process running being finished, goes back to ready queue
-    - Or goes to waiting state, waiting for some I/O operation to be complete, or if a process needs to be activated in X time, or another reason the program must wait. After what the program is waiting for is provided, is moved to ready queue.
-        - If program waits long enough without being given what it needs, goes to *deadlock state* 
-4. **Terminated** State
-5. **Deadlock** State
+ - If the process running in a time slice is finished, then it goes to state **4.** the **terminated state**.
+ - If the time slice is finished without the process that is running being finished, the process returns to the ready queue OR
+ - It goes to **5.** **waiting state**. In this state, the process waits for some I/O operation to be complete, if a process needs to be activated in X time, or for any another reason the program must wait. After what the program is waiting for is provided, it is moved to the **ready queue**.
+ - If a program waits long enough without being given what it needs, it goes to **6.** the **deadlock state**
 
-Many processes are admitted to the RAM and go to the ready queue, thus we have many processes in state of ready, giving us a **ready queue*
+Many processes are admitted to the RAM and go to the ready queue, thus we have many processes in the ready state, giving us a **ready queue**.
+Every program in ready state makes a ready queue. 
 
 ### Process Control Block
 Every process has a process control block (PCP). 
@@ -41,21 +40,19 @@ Pointer | Process State | Process Number
 
 ```
 
-- Pointer: If process's are waiting in ready state, all processes will be linked together as a linked list in waiting state.
-- Process State: State of process. (See [States of a process](#states-of-a-process))
+- Pointer: If processes are waiting in the ready state, all processes will be linked together as a linked list in waiting state.
+- Process State: The current state of the process. (See [States of a process](#states-of-a-process))
 - Process Number: Identification number.
 - Program Counter: Content of program counter. 
 - Register's Contents: Other Registers contents
-- Memory Limits: Start of process in the memory and what is the limit
-- List of I/O devices: What file is open/closed recently. All information about I/O operations for this process are kept here.
+- Memory Limits: Start of the process in the memory and what is the limit (amount) of memory that can be used by the process.
+- List of I/O devices: What file has been open/closed recently. All information about I/O operations for this process are kept here.
 - Accounting Information: Who owns the process, how much CPU time is used by the process so far. Every utilization by the process (how much memory is occupied). Who is going to pay for this process if money needs to change hands.
 
-Every program in ready state makes a ready queue. 
 
 ### Queue (Linked List)
-Has a *header* node, and PCP nodes
-TODO: Insert image
-
+Everywhere that you have a queue, it is built as a linked list. The linked list consists of many PCP nodes, with each node containing the contents of the PCP block (pointer, state, etc.). The list has a header node that contains H and T points (Header and tail). Each node has a pointer that points to the next PCP node, **AND** the header (first node) has pointer to the next PCP node (stored in H) and the pointer to the last PCP node (stored in T).
+![Queue as Linked List of PCP nodes](./imgs/pcp_linked_list_queue.JPG)
 ```
 H
 --
@@ -81,23 +78,18 @@ PCPN
 Pointer | Information, etc | ...
 ```
 
-Each pointer points to the next PCP, and the tail of the header points to last one.
-
-Everywhere that you have a queue, it is built as a linked list.
-
 #### Why do we have a tail?
-1. If we want to iterate backwards, we need doubly linked list using the tail. 
-2. If tail is broken, we need to know where we are. (?)
+1. If we want to iterate backwards, we need a doubly linked list using the tail. 
+2. If tail is broken, we need to know where we are. (TODO: What did he mean by this / what was his word-for-word explanation?
 
 ### Paths after Ready Queue -> CPI
+![Paths of a Job After Ready Queue](./imgs/job_path.JPG)
 Job comes to Ready Queue -> CPU -> (**split**)
-
-TODO: Insert image
 
 **split:** 
 1. Goes out of system OR 
-2. goes to I/O Request OR 
-3. Time slice expire OR
+2. Goes to I/O Request OR 
+3. Time slice expires OR
 4. Fork Child: In a process, suppose main module. Call a new method, then you have a child of the process that is running.  OR
 5. Wait for Event
 

@@ -38,13 +38,13 @@ Links to each lecture, and their corresponding [Quizlet Flashcards](https://quiz
 - [Lecture 7 (9-11)](./lecture_7%20(9-11))
     - [Quizlet Cards](https://quizlet.com/_5aqlvn)
 - [Lecture 8 (9-13)](./lecture_8%20(9-13))
-    - [Quizlet Cards (WIP)]()
+    - [Quizlet Cards (WIP)](https://quizlet.com/_5b3o91)
 - [Lecture 9 (9-18)](./lecture_9%20(9-18))
-    - [Quizet Cards (WIP)]()
+    - [Quizet Cards (WIP)]
 - [Lecture 10 (9-20)](./lecture%2010%20(9-20))
-    - [Quizlet Cards (WIP)]()
+    - [Quizlet Cards (WIP)]
 - [Lecture 11 (9-25)](./lecture%2011%20(9-25))
-    - [Quizlet Cards (WIP)]()
+    - [Quizlet Cards (WIP)]
 
 # Assignments
 Assignments, their assignment sheets, and any additional information provided by Dr. Hashemi.
