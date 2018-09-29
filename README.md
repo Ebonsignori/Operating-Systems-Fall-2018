@@ -44,17 +44,15 @@ Links to each lecture, and their corresponding [Quizlet Flashcards](https://quiz
 - [Lecture 10 (9-20)](./lecture%2010%20(9-20))
     - [Quizlet Cards](https://quizlet.com/_5bb17d)
 - [Lecture 11 (9-25)](./lecture%2011%20(9-25))
-    - [Quizlet Cards (Not Started)]
+    - [Quizlet Cards](https://quizlet.com/_5be3mx)
 
 # Assignments
 Assignments, their assignment sheets, and any additional information provided by Dr. Hashemi.
-- [Assignment 1](./assignments/assignment_1)
-   - Using p-threads to decrypt a 3-part message
+- [Assignment 1](./assignments/assignment_1): Using p-threads to decrypt a 3-part message
+    - *Includes typed out sample inputs*
    
 # Tests
 Tests, the lectures that they cover, Dr. Hashemi's review sessions, and a pdf of the test (if test date has passed). 
-- [Test 1 Review](./tests/test_1)
-   - Lectures 1 - 6
+- [Test 1 Review](./tests/test_1): Lectures 1 - 6
   
-- [Test 2 (Midterm) Review [Not yet taken]]()
-   - Lectures 7 - 12
+- [Test 2 (Midterm) Review [Not yet taken]](): Lectures 7 - 12
