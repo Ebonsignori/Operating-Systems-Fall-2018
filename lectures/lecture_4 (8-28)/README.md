@@ -32,7 +32,7 @@ One controller per kind of I/O device
 - System Bus
 
 ## CPU Structure
-![CPU Structure Diagram](./imgs/cpu_struct.JPG)
+![CPU Structure Diagram](imgs/cpu_struct.JPG)
 ALU: Arithmetic-Logic-Unit Does arithmetic and logic operations
 
 Registers: Memory space, with high speed. Faster and more expensive than RAM.

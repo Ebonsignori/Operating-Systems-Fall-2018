@@ -52,7 +52,7 @@ Pointer | Process State | Process Number
 
 ### Queue (Linked List)
 Everywhere that you have a queue, it is built as a linked list. The linked list consists of many PCP nodes, with each node containing the contents of the PCP block (pointer, state, etc.). The list has a header node that contains H and T points (Header and tail). Each node has a pointer that points to the next PCP node, **AND** the header (first node) has pointer to the next PCP node (stored in H) and the pointer to the last PCP node (stored in T).
-![Queue as Linked List of PCP nodes](./imgs/pcp_linked_list_queue.JPG)
+![Queue as Linked List of PCP nodes](imgs/pcp_linked_list_queue.JPG)
 ```
 H
 --
@@ -83,7 +83,7 @@ Pointer | Information, etc | ...
 2. If tail is broken, we need to know where we are. (TODO: What did he mean by this / what was his word-for-word explanation?
 
 ### Paths after Ready Queue -> CPI
-![Paths of a Job After Ready Queue](./imgs/job_path.JPG)
+![Paths of a Job After Ready Queue](imgs/job_path.JPG)
 
 *See the 3rd slide/box in [Lecture 8 Slides](../lecture_7%20(9-11)/slides_8.pdf) for an accurate depiction of the queue paths*. 
 

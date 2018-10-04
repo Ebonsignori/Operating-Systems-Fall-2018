@@ -31,7 +31,7 @@ In this case, J1 suffers from **Starvation.** Because it doesn't get the attenti
 **Solve starvation by Aging:** If a job is waiting for X units of time, we change it's priority over time (as it ages) so that sooner or later the job gets the attention of the CPU.
 
 ## 4. Round Robin
-![](./imgs/round_robin_algo.jpg)
+![](imgs/round_robin_algo.jpg)
 ```
 Jobs  | CPU Burst | Arrival Time
 J1        24        0

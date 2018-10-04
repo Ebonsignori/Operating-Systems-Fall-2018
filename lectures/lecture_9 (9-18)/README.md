@@ -97,7 +97,7 @@ Kernel threads execute faster than a user thread, but are created slower than us
 ## Multi Threading Models
 The following 3 models show the mappings of user threads onto kernel threads. 
 
-*See the slides on page 3 of the [Lecture 9 Slides](./slides_9.pdf)*
+*See the slides on page 3 of the [Lecture 9 Slides](slides_9.pdf)*
 
 **1-1 (one-to-one):**
 - Advantage: Great Parallelism

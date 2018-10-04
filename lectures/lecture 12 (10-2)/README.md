@@ -67,7 +67,7 @@ We have several techniques for comparision
     
     
 The following image is a demonstration of the complexity of using queuing models. 
-![Queueing Models Demonstration](./imgs/queuing_model_demonstration.jpg)
+![Queueing Models Demonstration](imgs/queuing_model_demonstration.jpg)
 
 # Review of Lecture 11 Preemptive Round Robin
 Suppose that you have job, `J_i`, and CPU burst for this job is `C_i`.
@@ -112,7 +112,7 @@ Resulting Job Queue:
 ```
 
 # Assignment 1
-The rest of the lecture was spent discussing [Assignment 1](../assignments/assignment_1) and the contents can be found in the [assignment_1](../assignments/assignment_1) directory.
+The rest of the lecture was spent discussing [Assignment 1](../../assignments/assignment_1) and the contents can be found in the [assignment_1](../../assignments/assignment_1) directory.
 
 Here I'll include the concepts that we may be tested on. 
 

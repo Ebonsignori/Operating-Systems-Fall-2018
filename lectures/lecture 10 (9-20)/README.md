@@ -49,7 +49,7 @@ This system takes 2 min total
 ```
 As we can see, the Multiprogramming system is faster
 
-![With/Without Multiprogramming System Comparision](./imgs/with_vs_without_multiprogramming.JPG)
+![With/Without Multiprogramming System Comparision](imgs/with_vs_without_multiprogramming.JPG)
 
 ### CPU Burst
 
@@ -58,7 +58,7 @@ As we can see, the Multiprogramming system is faster
 Assume that all jobs can be finished in 1 CPU burst (not reality).
 If you collect all bursts for N processes, we find : 
 
-![CPU Burst vs Frequency Graph](./imgs/cpu_burst_freq_graph.JPG)
+![CPU Burst vs Frequency Graph](imgs/cpu_burst_freq_graph.JPG)
 
 
 We call system for graph image, a CPU bound system. (TODO Improve definition of CPU bound system)  
@@ -197,7 +197,7 @@ Average Wait Time = (25 + 15 + 0 + 5 + 3) / 5 = 9.6
 ```
 
 ## Prediction 
-![Prediction Graph of CPU Burst Times](./imgs/burst_prediction_graph.JPG)
+![Prediction Graph of CPU Burst Times](imgs/burst_prediction_graph.JPG)
 A drawback of using SJG (even though it is better) is that we don't know CPU burst beforehand. 
 
 We predict Job 1 CPU burst to take: `tou_1` and it actually takes: `t1`

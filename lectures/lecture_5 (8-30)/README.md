@@ -83,7 +83,7 @@ Takes a source program written in a high level language and converts it to machi
    - Uses automata to verify syntax for every statement. 
    - Example, individual automata for if statement, for statement, etc.
    -  Start of syntax analyzer uses epsilon to move between each of these statements who have their own separate automata, joined by epsilon transitions from starting node. (see image).
-   ![Automata](./imgs/automata.JPG) 
+   ![Automata](imgs/automata.JPG) 
 **Semantic Analyzer** 
    - Build an execution matrix to check for correctness of semantics. 
    - Example: 
@@ -120,7 +120,7 @@ A       ...        var
   4        =        A               (Pointer to T1)
   ```
 
-![Execution Matrix and Symbol Table](./imgs/table.JPG)
+![Execution Matrix and Symbol Table](imgs/table.JPG)
 
 ##### Synthesis Component (part 2)
 Translator converts all hundreds of languages to assembly language, then only one compiler to convert from assembly to machine language.
