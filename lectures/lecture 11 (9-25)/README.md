@@ -131,7 +131,25 @@ Work in order: J1, J2, J3, J4
 ```
 
 #### Average Turnaround Time of Preemptive RR 
-(TODO: Not done in class)
+```
+Job Turnaround Times:
+J1: 14 - 0 = 13
+J2: 20 -2 = 18
+J3: 9 - 3 = 6
+J4: 5 - 4 = 1
+
+Average Turnaround Time:
+(13 + 18 + 6 + 1) / 4 = 9.5
+```
 #### Average Waiting Time of Preemptive RR 
-(TODO: Not done in class)
+```
+Job Waiting Times:
+J1: 14 - 0 - 9 = 5
+J2: 20 - 2 - 6 = 12
+J3: 9 - 3 - 4 = 2
+J4: 5 - 4 - 1 = 0
+
+Average Waiting Time:
+(5 + 12 + 2 + 0) / 4 = 4.75
+```
 
