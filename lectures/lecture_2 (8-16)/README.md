@@ -34,7 +34,7 @@ Computer characteristics that do not exist in reality, but that you think exist.
 ## Computer's Overall Picture
 - User
 - [System Programs](#system-programs)
-- [Operating System](#operating-system)
+- [Operating System](#operating-system-contents)
 - Computer Hardware
 
 #### System Programs
@@ -46,7 +46,7 @@ Computer characteristics that do not exist in reality, but that you think exist.
 3. Application Program 
 - Ex. Photoshop, editor, web browser
 
-#### Operating System
+#### Operating System Contents
 1. Kernel (*Old name* resident monitor)
 2. Memory Management Routines
 3. Device Management Routines
@@ -63,7 +63,7 @@ If you want to execute a program, then it must be brought into your ram, it cann
 
 When starting an operating system, instead of loading the entire OS, we load the absolute minimum (the part that we need) of the OS onto the ram upon startup, and that absolute minimum is called the Kernel.
 
-After the kernel is loaded, the rest of the OS lives on the slower harddrive. 
+After the kernel is loaded, the rest of the OS lives on the slower hard drive. 
 
 ## OS Evolution
 1. Sign-up Scheme

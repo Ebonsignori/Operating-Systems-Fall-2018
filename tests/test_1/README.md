@@ -14,7 +14,7 @@
 - Memory Mapped I/O
     - When registers of device controller are physically part of the RAM instead of separate
 - BIOS
-    - Locates and loads the kernel into the RAM and runs it and it initalizes all of the related registers and variables needed for the system. 
+    - Locates and loads the kernel into the RAM and runs it and it initializes all of the related registers and variables needed for the system. 
 
 3. a) How are system call parameters sent?
     1. Registers

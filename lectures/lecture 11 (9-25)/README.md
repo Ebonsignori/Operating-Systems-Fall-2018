@@ -72,7 +72,7 @@ In processor sharing, we have the problem of context switching.
 2. Software Solutions: We must do context switching between jobs.
 
 ## 5. Preemptive Algorithms
-In a Preemptive Scheduling Algorithm, when the CPU is working on a job, you kick out the CPU in the middle of a job based on some criteria (shorter job, arrivial time, etc.).
+In a Preemptive Scheduling Algorithm, when the CPU is working on a job, you kick out the CPU in the middle of a job based on some criteria (shorter job, arrival time, etc.).
 
 We have Preemptive:
 1. SJF (Shortest-Job-First)

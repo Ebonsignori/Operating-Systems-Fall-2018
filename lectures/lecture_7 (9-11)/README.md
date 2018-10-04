@@ -84,8 +84,7 @@ In a VM, there is **perfect protection** if no communications between users take
 ### Virtual Machines are Coming Back
 Virtual machines are coming back for: 
    1. Solving system compatibility problems. 
-   2. Running programs on platforms that it wasn't designed for.
-    - E
+   2. Running programs on platforms that it was not designed for.
 
 #### JVM Includes
 1. Class Loader

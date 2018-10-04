@@ -21,7 +21,7 @@ Also called a **sequential process** (same meaning)
 
 ### States of a process
 New State -> (admitted)
-1. **New** State: Time program moves from harddisk into RAM (admitted into RAM)
+1. **New** State: Time program moves from hard disk into RAM (admitted into RAM)
 2. **Ready** State: Process is ready to be executed/get attention by/of CPU. 
 3. **Running** State: When a process is running 3 cases happen
  - If the process running in a time slice is finished, then it goes to state **4.** the **terminated state**.
@@ -85,7 +85,7 @@ Pointer | Information, etc | ...
 ### Paths after Ready Queue -> CPI
 ![Paths of a Job After Ready Queue](imgs/job_path.JPG)
 
-*See the 3rd slide/box in [Lecture 8 Slides](../lecture_7%20(9-11)/slides_8.pdf) for an accurate depiction of the queue paths*. 
+*See the 3rd slide/box in [Lecture 8 Slides](../lecture_8%20(9-13)/slides_8.pdf) for an accurate depiction of the queue paths*. 
 
 Job comes to Ready Queue -> CPU -> (**split**)
 
@@ -203,7 +203,7 @@ Process Resource and Global Variable Sharing Scenarios:
     2. Child over stepped boundary in use of resources and therefor must be terminated.  
 3. Cascading termination: Parent of child process is deleted, then the child process is also deleted.
 
-2 i) Example: Suppose there is a huge database where child processes are split up to search for a piece of data. If one child process finds it, then the others aren't needed and are terminated.   
+2 i) Example: Suppose there is a huge database where child processes are split up to search for a piece of data. If one child process finds it, then the others are not needed and are terminated.   
 
 ### How to Kill a Process
 Use the `kill` command. The kill command accepts an id# argument in the form: `kill id#`.

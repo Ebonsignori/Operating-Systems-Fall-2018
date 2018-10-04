@@ -26,7 +26,7 @@ Operating System:
 Interrupt is checked after each machine cycle. 
 
 Machine cycle
-PC program counter has addr of next instruction to be fetched into the instruction register (IR) which has the next instruction.
+PC program counter has the address of the next instruction to be fetched into the instruction register (IR) which has the next instruction.
 PC is incremented.
 
 ```
