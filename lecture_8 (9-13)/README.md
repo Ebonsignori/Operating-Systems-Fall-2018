@@ -85,7 +85,7 @@ Pointer | Information, etc | ...
 ### Paths after Ready Queue -> CPI
 ![Paths of a Job After Ready Queue](./imgs/job_path.JPG)
 
-*See the 3rd slide/box in [Lecture 8 Slides](slides_8.pdf) for an accurate depiction of the queue paths*. 
+*See the 3rd slide/box in [Lecture 8 Slides](../lecture_7%20(9-11)/slides_8.pdf) for an accurate depiction of the queue paths*. 
 
 Job comes to Ready Queue -> CPU -> (**split**)
 

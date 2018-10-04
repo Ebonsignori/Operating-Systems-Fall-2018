@@ -10,24 +10,24 @@ Jobs are categorized:
 1. System Jobs
 2. Interactive Jobs
 3. Batch Jobs
-4 (etc.) as catorgized by the manufactorer. 
+4. (etc.) as categorized by the manufacturer. 
 
-Each category goes to a specific queue.
+Each category maps to a specific queue.
 
-Queues:
-1 (first) System Jobs. This queue has the highest priority. 
-2. Interactive Jobs. This queue has the second highest priority. 
-3. Batch Jobs. 
+Queues In Order:
+1. (first) System Jobs. This queue has the highest priority. 
+2. (second) Interactive Jobs. This queue has the second highest priority. 
+3. (third) Batch Jobs.
+4. (fourth, fifth, etc.) 
 
-Each queue could be sheduled with a different algorithm.
+Each queue could be scheduled with a different algorithm.
 
-Each queue doesn't execute until the queue above it is empty (as each queue above has a higher priority). If a new job comes in that is in a higher queue, it preemptive takes over CPU. This causes starvation. 
-
+The queues have priority based on their order. Each queue doesn't execute until the queue above it is empty. If a new job comes in that is in a higher queue, it preemptively takes over the CPU. This causes starvation among jobs in lower  categories/queues.
 
 ### Algorithm #7 Multi-level Feedback Queues
 Ready queue is made up of several queues. Priority is top to bottom (just like multi-level queue).
 
-Unlike the ready queue, all jobs go to the top queue. If they aren't completed in the allotted time slice, they move down the queue.
+Unlike the ready queue, all jobs go to the top queue. If they are not completed in the allotted time slice, they move down the queue.
 
 ```
 =------------------------------
@@ -41,28 +41,33 @@ Queue 4 with quantum time = 20
 -------------------------------
 ```
 
-Just like multi-queues anything that enters in a higher queue will interrupt (preemptive) the lower queue and take over. This algorithm helps jobs that have shorter CPU bursts get done more quickly. 
+Just like multi-queues, anything that enters in a higher queue will interrupt (preemptive) the lower queue and take over. This algorithm helps jobs that have shorter CPU bursts get done more quickly. 
 
 Starvation is still a problem. However we resolve starvation by moving jobs back up the queue to a higher priority queue as they age. 
 
 ## Algorithm Evaluation
 We have several techniques for comparision
-1. Analytic (Deterministic Models): Means we have a predefined/predetermined workload. As an example he drew the job, CPU burst, arrival time. When we have this data we know our workload.
+1. Analytic (Deterministic Models): Means we have a predefined/predetermined workload. As an example he drew the table of the jobs, their CPU bursts, and their arrival times. When we have this data we know our workload.
     1. Advantage: Simplicity. 
     2. Disadvantage: Static (may not reflect the actual workload).
 
-2. Queueing Models: They assume that if you look at a computer, every resource has a queue (cpu has a queue, memory has a queue, I/o has a queue, so on and so forth). (TODO: Every resource has a server?)
-    1. Advantage: (TODO: What is the advantage of this)
+2. Queuing Models: They assume that if you look at a computer, every resource has a queue (CPU has a queue, memory has a queue, I/o has a queue, so on and so forth). (TODO: Every resource has a server?)
+    1. Advantage: Uses dynamic data (more accurate reflection of workload)
     2. Disadvantages: 
         1. Calculations are difficult to understand and impractical to use.
-        2. Make assumptions. In the images example, we make assumption that queues have same rate of entering as they do leaving. Arrival rate = departure rate to get `n = lambda * w` = `length of queue = average arrival time * average wait time. ` (TODO Insert Image)
-
-3. Simulation: System builds an architecture inside that fits a model you have in mind. (TODO: Need correct definition). You send a set of inputs (data) to the simulation. 
+        2. Make assumptions. In the example, we make the assumption that queues have the same rate of entering as they do leaving. Arrival rate = departure rate to get `n = lambda * w` = `length of queue = average arrival time * average wait time.`
+        
+3. Simulation: System builds an architecture inside that fits a model you have in mind. You send a set of inputs (data) to the simulation. (TODO: Need correct definition and advantage)
     - Advantage:
     - Disadvantage: Not the real thing
 
-4. Implementation: The real thing. Use the real algorithm and collect data on how it performs. 
+4. Implementation: The real thing. Use the real algorithm on systems and collect data on how it performs. 
+    - Advantage: Only way to get the real time
     - Disadvantage: As you collect data over time, the usage of your testing machine is changing
+    
+    
+The following image is a demonstration of the complexity of using queuing models. 
+![Queueing Models Demonstration](./imgs/queuing_model_demonstration.jpg)
 
 # Review of Lecture 11 Preemptive Round Robin
 Suppose that you have job, `J_i`, and CPU burst for this job is `C_i`.
@@ -105,3 +110,37 @@ q = 6 (quantum slice)
 Resulting Job Queue:
 25 | J1 | 24 | J1 | 18 | J2 | 13 | J5 | 8 | J4 | 5 | J3 | 4 | J3 | 3 | J3 | 2 | J1 | 1 | J1 | 0
 ```
+
+# Assignment 1
+The rest of the lecture was spent discussing [Assignment 1](../assignments/assignment_1) and the contents can be found in the [assignment_1](../assignments/assignment_1) directory.
+
+Here I'll include the concepts that we may be tested on. 
+
+What are the functions used to create, join, and exit a thread? What are each of their parameters? 
+
+### Create a p-thread
+`pthread_create(&thread_id, null, part1, (void*)message);`
+
+Where
+
+1. `&thread_id` = The pointer to the thread ID
+2. `null` = Thread attributes (none passed in)
+3. `part1` = Name of the thread
+4. `(void*)message` = The message that will be sent to the thread
+
+It returns either 0 (successful creation) or 1 (unsuccessful creation).
+
+### Exit a p-thread instance
+Within the `void *part1(char *section1)` code block:
+
+`pthread_exit("test");`
+
+### Suspend Execution in calling thread until target thread terminates
+`pthread_join(thread_id, &threadPointer)`
+
+Where
+
+1. `thread_id` = The pointer to the thread ID
+2. `&threadPointer` = The return value of thread1 is stored in the location pointed to by threadPointer. This value can be null (no return). 
+
+

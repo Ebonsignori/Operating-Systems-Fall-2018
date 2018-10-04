@@ -47,7 +47,7 @@ int main() {
     
     result = pthread_create(&thread_id, null, part1, (void*)message);
     
-    // 0 if thread has been created successfully 
+    // 0 if thread has been created successfully, otherwise 1 if failure
     if (result = 0) {
         // TODO
     } 
@@ -56,7 +56,7 @@ int main() {
     result = pthread_join(thread_id, &threadPointer);
 }
 
-void *part1(char* section1) {
+void * part1(char * section1) {
     pthread_exit("test");
 }
 ```

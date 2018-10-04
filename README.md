@@ -45,7 +45,9 @@ Links to each lecture, and their corresponding [Quizlet Flashcards](https://quiz
     - [Quizlet Cards](https://quizlet.com/_5bb17d)
 - [Lecture 11 (9-25)](./lecture%2011%20(9-25))
     - [Quizlet Cards](https://quizlet.com/_5be3mx)
-
+- [Lecture 12 (10-2)](./lecture%2012%20(10-2))
+    - [Quizlet Cards](https://quizlet.com/_5cmk4i)
+    
 # Assignments
 Assignments, their assignment sheets, and any additional information provided by Dr. Hashemi.
 - [Assignment 1](./assignments/assignment_1): Using p-threads to decrypt a 3-part message
