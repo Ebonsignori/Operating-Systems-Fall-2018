@@ -52,16 +52,16 @@ We have several techniques for comparision
     2. Disadvantage: Static (may not reflect the actual workload).
 
 2. Queuing Models: They assume that if you look at a computer, every resource has a queue (CPU has a queue, memory has a queue, I/o has a queue, so on and so forth). (TODO: Every resource has a server?)
-    1. Advantage: Uses dynamic data (more accurate reflection of workload)
+    1. Advantage: Uses dynamic data (more accurate reflection of workload). For example, randomly generating CPU bursts. 
     2. Disadvantages: 
         1. Calculations are difficult to understand and impractical to use.
-        2. Make assumptions. In the example, we make the assumption that queues have the same rate of entering as they do leaving. Arrival rate = departure rate to get `n = lambda * w` = `length of queue = average arrival time * average wait time.`
+        2. We make assumptions to help us solve the models. In the example where we randomly generate CPU bursts, we make the assumption that queues have the same rate of entering as they do leaving. Arrival rate = departure rate to get `n = lambda * w` = `length of queue = average arrival time * average wait time.`
         
-3. Simulation: System builds an architecture inside that fits a model you have in mind. You send a set of inputs (data) to the simulation. (TODO: Need correct definition and advantage)
-    - Advantage:
-    - Disadvantage: Not the real thing
+3. Simulation: You download/use a package where you specify the parameters of the system that you want to simulate to the package, and it builds an architecture inside that fits the model of the system that you have in mind to simulate algorithms on. Then you send a set of inputs (data) to the simulation and evaluate the results. We can get the input data to send to the simulation from the Queuing model.
+    - Advantage: Closer to reality
+    - Disadvantage: However, still not reality
 
-4. Implementation: The real thing. Use the real algorithm on systems and collect data on how it performs. 
+4. Implementation: This is reality. Use the real algorithm on systems over time, and collect data on how the algorithm performs. 
     - Advantage: Only way to get the real time
     - Disadvantage: As you collect data over time, the usage of your testing machine is changing
     
