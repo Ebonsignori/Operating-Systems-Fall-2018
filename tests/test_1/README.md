@@ -1,7 +1,7 @@
 # Test 1 Review 
 *Listen to the beginning of [Lecture 7](test_1_review_recording.m4a) recording to hear Hashemi's review.*
 
-**PDF For Reference:** [Test 1 - Evan Bonsignori (Highest Grade)](test_1.pdf)
+**PDF For Reference:** [Test 1 - Evan Bonsignori](test_1.pdf)
 
 1. Machine Cycle: things that take place before and after an interrupt 
 - Before

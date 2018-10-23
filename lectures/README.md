@@ -38,3 +38,7 @@ Links to each lecture, and their corresponding [Quizlet Flashcards](https://quiz
     - [Quizlet Cards](https://quizlet.com/_5be3mx)
 - [Lecture 12 (10-2)](./lecture%2012%20(10-2))
     - [Quizlet Cards](https://quizlet.com/_5cmk4i)
+- [Lecture 13 (10-9)](./lecture%2013%20(10-9))
+    - [Quizlet Cards (WIP)](#)
+- [Lecture 14 (10-18)](./lecture%2014%20(10-18))
+    - [Quizlet Cards (WIP)](#)
