@@ -5,6 +5,7 @@
 
 This repo contains the following content from Dr. Hashemi's Fall 2018 Operating Systems Course:
 
-### **1. [Lectures](./lectures)**
-### **2. [Tests](./tests)** 
-### **3. [Assignments](./assignments)**
+### **1. [Syllabus](./syllabus.pdf)**
+### **2. [Lectures](./lectures)**
+### **3. [Tests](./tests)** 
+### **4. [Assignments](./assignments)**
