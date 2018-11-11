@@ -33,3 +33,41 @@ Please open an issue or email me if any of these do not match the samples provid
 
 ***ABC 5 6 7 8 10 1 4 8 11*K SAAPXGOW**MKPW 10 2 12 1*J RZZOWFNV
 ```
+
+# Hashemi's Code Review
+```
+#include <pthread.h>
+void *part1(char *section1);
+
+int main() {
+    pthread_t thread_id
+    void* threadPointer
+    int result;
+    char* message = "today is a good day";
+    
+    result = pthread_create(&thread_id, null, part1, (void*)message);
+    
+    // 0 if thread has been created successfully, otherwise 1 if failure
+    if (result = 0) {
+        // TODO
+    } 
+    
+    // Join threads back together
+    result = pthread_join(thread_id, &threadPointer);
+}
+
+void * part1(char * section1) {
+    pthread_exit("test");
+}
+```
+
+1.
+`pthread_t` : type of variable
+`thread_id` : variable name
+
+
+2. result of pthread_create() will always be 0 or 1. 
+
+3. Input is typed in, not read from a file.
+
+4. System does not shut down after 1 input is typed in, but prompts for a new input. 

@@ -1,7 +1,7 @@
 # Test 1 Review 
 *Listen to the beginning of [Lecture 7](test_1_review_recording.m4a) recording to hear Hashemi's review.*
 
-**PDF For Reference:** [Test 1 - Evan Bonsignori (Highest Grade)](test_1.pdf)
+**PDF For Reference:** [Test 1 - Evan Bonsignori](test_1.pdf)
 
 1. Machine Cycle: things that take place before and after an interrupt 
 - Before
@@ -14,7 +14,7 @@
 - Memory Mapped I/O
     - When registers of device controller are physically part of the RAM instead of separate
 - BIOS
-    - Locates and loads the kernel into the RAM and runs it and it initalizes all of the related registers and variables needed for the system. 
+    - Locates and loads the kernel into the RAM and runs it and it initializes all of the related registers and variables needed for the system. 
 
 3. a) How are system call parameters sent?
     1. Registers
