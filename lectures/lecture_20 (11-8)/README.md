@@ -7,7 +7,7 @@ On materials after Midterm exam up to today (Not including next Tuesday's lectur
 
 # Lecture Notes
 ### Disk System
-Suppose CPU while executing a process hits a case where data must be read in or writen from/to disk.
+Suppose CPU while executing a process hits a case where data must be read in or written from/to disk.
 
 A disk system is in charge of:
 1. Mechanical Part. OS tells disk you must do the reading operation. Disk needs to perform IO operation. You have read and write head that moves in and out of the disk. The movement of read and write stay on the same track. 
@@ -19,7 +19,7 @@ CPU sends following data to Disk System:
 1. Type of operation read/write
 2. Where data is located on disk (key or index)
 3. Where should it go in buffer (address of buffer)
-4. Size of information to be transfered.
+4. Size of information to be transferred.
 
 Disk Queue holds I/O operations when multiple I/O operations are sent to slower disk. To decide order of queue we use one of size disk scheduling algorithms. 
 

@@ -16,15 +16,15 @@ Do (ungraded) exercise handed out in class
 - Dr. Hashemi
 
 **Process Synchronization:** If you have several processes, how can you run these processes in parallel?
-
 Concurrency happens in two levels:
-1. Intra-concurrency: Concurrency/Parrallelism inside a process
-2. Inter-concurrency/parallelism: Parrallelism among several processes
+
+1. Intra-concurrency: Concurrency/Parallelism within a process
+2. Inter-concurrency: Concurrency/Parallelism among several processes
+
+Precedence graph: A directed acyclic graph made of edges and nodes. Each node represents 1 statement of a process, each edge represents order of the statements execution. 
 
 ## Intra-concurrency
 Goal: Achieving parallelism *within* a process. 
-
-Precedence graph: A directed acyclic graph made of edges and nodes. Each node represents 1 statement of a process, each edge represents order of the statements execution. 
 
 (See [slides](./slides_13.pdf) picture for example)
 
@@ -45,7 +45,7 @@ And the write variable(s) are represented as the set:
 `W(S7) = {g}`
 
 ### Concurrency Condition
-Two statements S_i and S_j can concurrently be executed if:
+Three statements S_i and S_j can concurrently be executed if:
 1. R(S_i) intersect W(S_j) = Empty set
 2. W(S_i) intersect R(S_j) = Empty set
 3. W(S_i) intersect W(S_j) = Empty set

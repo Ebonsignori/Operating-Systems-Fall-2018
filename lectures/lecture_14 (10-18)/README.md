@@ -9,8 +9,7 @@ Intraconcurrency / Intrasycronization
 This lecture: Interconcurrency
 
 ## Background
-**Independent Process**: A process that cannot be affected by any other processes, *and/or* be effected by other processes. 
-
+**Independent Process**: A process that cannot affect any other processes, and/or be effected by other processes.
 
 **Cooperating Process**: A process that can affect *and/or* be effected by other processes
 

@@ -38,15 +38,12 @@ Region u do A
 
 **Abstract data types use CRC.** ADT (Class in Java). Has a name, set of variables, and a set of methods (procedures). 
 
-# Integregation of C.R.C> and ADT ex
+# Integration of C.R.C> and ADT ex
 You have a number of buffers or frames that we want to occupy. When we occupy it we change variable to false
 
 
-# Nested Crit Region
+# Nested Critical Region
 x > y => x has greater priority than y
 
 # Condition Critical Region Construct 
-(Slides)
-
-# Modified Condition Critical Region Construct
- 
+(Slides Rest)

@@ -8,14 +8,17 @@
 
 **Semaphore:** Is an integer variable.
 
-Two operations can be performed on this variable. These operations are atmoic: meaning when one operation is being performed, the other cannot be performed. 
+Two operations can be performed on this variable. These operations are atomic: meaning when one operation is being performed, the other cannot be performed. 
 
-P: wait
+1. (Wait) P(S): 
+While S <= 0: skip
+    S = S - 1;
 
-V(S) 
+2. (Signal) V(S):
+V(S): S = S + 1;
 
 ## Example
-Two processes: S_1, S_2 that need to be excuted at the same time with shared variable, sync.
+Two processes: S_1, S_2 that need to be executed at the same time with shared variable, sync.
 
 ```
                 sync = 0
@@ -37,7 +40,7 @@ Parbegin
 ```
 
 ## 
-Solutuion for problem #3:
+Solution for problem #3:
 
 However all processes can be waiting at `P(mutex)` leading to starvation. 
 
