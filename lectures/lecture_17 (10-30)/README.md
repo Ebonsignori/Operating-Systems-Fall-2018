@@ -4,4 +4,4 @@
 
 
 # Lecture Notes
-Class Missed. See slides / recording (courtesy of Shane)
+Class Missed. See slides / recording
