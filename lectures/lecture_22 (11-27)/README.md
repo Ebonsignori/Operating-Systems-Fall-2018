@@ -5,7 +5,7 @@ Project Presentations - November 29th (Thursday)
 
 Demo: Run each program
 
-Optionally we can go tomorrow (Weds) around 2pm to test run programs
+Optionally, we can go tomorrow (Weds) around 2pm to test run programs
 
 # Lecture Notes
 Distributed Systems (Listen to lecture)
