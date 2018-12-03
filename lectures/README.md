@@ -55,6 +55,6 @@ Links to each lecture, and their corresponding [Quizlet Flashcards](https://quiz
 - [Lecture 20 (11-8)](./lecture_20%20(11-8))
     - [Quizlet Cards](https://quizlet.com/_5mu2j1)
 - [Lecture 21 (11-13)](./lecture_21%20(11-13))
-    - [Quizlet Cards [Pending]]()
+    - [Quizlet Cards (Final-likely selections, not comprehensive)](https://quizlet.com/_5qf786)
 - [Lecture 22 (11-27)](./lecture_22%20(11-27))
-    - [Quizlet Cards [Pending]]()
+    - [Quizlet Cards](https://quizlet.com/_5qga5o)
