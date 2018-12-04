@@ -9,3 +9,7 @@ This repo contains the following content from Dr. Hashemi's Fall 2018 Operating 
 ### **2. [Lectures](./lectures)**
 ### **3. [Tests](./tests)** 
 ### **4. [Assignments](./assignments)**
+
+## Final Review
+- [Final Review (Quizlet Cards)](https://quizlet.com/_5qj8fd)
+- [Final Practice Test](./tests/test_4/test_4_study.pdf)

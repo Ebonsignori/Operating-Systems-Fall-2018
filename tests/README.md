@@ -8,5 +8,5 @@ Tests, the lectures that they cover, Dr. Hashemi's review sessions, and a pdf of
 
 - [Test 3](./test_3): Lectures 13 - 20
 
-- [Test 4 (Final) Study Guide](./test_4): Lectures 1 - 22
+- [Test 4 (Final)](./test_4): Lectures 1 - 22
 
